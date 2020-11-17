@@ -1,29 +1,67 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply plugin: 'com.android.application'
 
-buildscript {
-    //ext.kotlin_version = '1.3.31'
-    repositories {
-        google()
-        jcenter()
-        
+//apply plugin: 'kotlin-android'
+
+//apply plugin: 'kotlin-android-extensions'
+
+//apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.example.databindingmvvmapp"
+        minSdkVersion 14
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.3'
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
 
-        //classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+    dataBinding {
+        enabled true
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
     }
 }
 
-allprojects {
-    repositories {
-        google()
-        jcenter()
-        
-    }
-}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
+    //Android UI Layout Library and backward-compatible Library(Legacy)
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation "androidx.legacy:legacy-support-v4:1.0.0"
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.2.0-alpha03'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
+
+    //Life Cycle Components
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+
+    //Android Unit Test and U.I. Test Library
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //Kotlin Library
+    //implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //implementation 'androidx.core:core-ktx:1.1.0'
+
+    //Room -> use annotationProcessor for java, kapt for kotlin
+    implementation "androidx.room:room-runtime:2.2.3" //android.arch.persistence.room:runtime
+    annotationProcessor "androidx.room:room-compiler:2.2.3" //android.arch.persistence.room:compiler
+    //kapt "android.arch.persistence.room:compiler:1.1.1."
+    testImplementation "androidx.room:room-testing:2.2.3" //android.arch.persistence.room:testing
+
+    //Work Manager
+    //implementation "androidx.work:work-runtime:2.2.0" // (Java only)
+    //implementation "androidx.work:work-runtime-ktx:2.2.0" // Kotlin + coroutines
 }

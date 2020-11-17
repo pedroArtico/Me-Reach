@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout android:layout_height="match_parent"
+        android:layout_width="match_parent">
+    <TextView
+        android:layout_width="417dp"
+        android:layout_height="604dp"
+        android:background="@color/pink"
+        android:gravity="center"
+        android:text="Seja Bem Vindo!"
+        android:textColor="@color/background_material_dark_black"
+        android:textFontWeight="900"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/bot"
+        android:layout_width="123dp"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:text="Avançar -->"
+        android:layout_alignParentRight="true" />
+
+</FrameLayout>
+    </layout>
