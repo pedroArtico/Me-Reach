@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Users\\Principal\\Documents\\Segunda Chance\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_welcome.xml",
+        "source": "C:\\Users\\Principal\\Documents\\Segunda Chance\\app\\src\\main\\res\\layout\\fragment_welcome.xml"
+    },
+    {
+        "merged": "C:\\Users\\Principal\\Documents\\Segunda Chance\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\add_fragment.xml",
+        "source": "C:\\Users\\Principal\\Documents\\Segunda Chance\\app\\src\\main\\res\\layout\\add_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\Principal\\Documents\\Segunda Chance\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_sample.xml",
+        "source": "C:\\Users\\Principal\\Documents\\Segunda Chance\\app\\src\\main\\res\\layout\\item_sample.xml"
+    },
+    {
+        "merged": "C:\\Users\\Principal\\Documents\\Segunda Chance\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\main_fragment.xml",
+        "source": "C:\\Users\\Principal\\Documents\\Segunda Chance\\app\\src\\main\\res\\layout\\main_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\Principal\\Documents\\Segunda Chance\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\update_fragment.xml",
+        "source": "C:\\Users\\Principal\\Documents\\Segunda Chance\\app\\src\\main\\res\\layout\\update_fragment.xml"
+    }
+]
